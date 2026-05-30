@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DOJ Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="badge">DOJ</div>
+      <div>
+        <h2>DOJ Portal</h2>
+        <p>Justice Operations</p>
+      </div>
+    </div>
+
+    <nav>
+      <button onclick="showPage('dashboard')">Dashboard</button>
+      <button onclick="showPage('cases')">Case Lookup</button>
+      <button onclick="showPage('warrants')">Warrants</button>
+      <button onclick="showPage('evidence')">Evidence</button>
+      <button onclick="showPage('schedule')">Court Schedule</button>
+    </nav>
+  </aside>
+
+  <main class="main">
+
+    <section id="dashboard" class="page">
+      <div class="hero">
+        <div>
+          <h1>Department of Justice Dashboard</h1>
+          <p>Centralized case, warrant, evidence, and court management system.</p>
+        </div>
+        <div class="seal">⚖</div>
+      </div>
+
+      <div class="cards">
+        <div class="card blue"><span>Total Cases</span><h3>128</h3></div>
+        <div class="card red"><span>Active Warrants</span><h3>14</h3></div>
+        <div class="card gold"><span>Upcoming Hearings</span><h3>9</h3></div>
+        <div class="card green"><span>Evidence Records</span><h3>342</h3></div>
+      </div>
+
+      <div class="grid">
+        <div class="panel">
+          <h2>Upcoming Hearings</h2>
+          <div class="list-item"><b>CASE-0012</b><span>State v. Miller — 7:00 PM</span></div>
+          <div class="list-item"><b>CASE-0015</b><span>State v. Doe — 7:30 PM</span></div>
+          <div class="list-item"><b>CASE-0018</b><span>State v. Walker — 8:00 PM</span></div>
+        </div>
+
+        <div class="panel">
+          <h2>Judge Status</h2>
+          <div class="list-item"><b>Judge Carter</b><span class="pill green-pill">Available</span></div>
+          <div class="list-item"><b>Judge Thomas</b><span class="pill red-pill">In Court</span></div>
+          <div class="list-item"><b>Judge Williams</b><span class="pill green-pill">Available</span></div>
+        </div>
+
+        <div class="panel">
+          <h2>Recent Filings</h2>
+          <div class="list-item"><b>CASE-0021</b><span>Filed</span></div>
+          <div class="list-item"><b>CASE-0022</b><span>Scheduled</span></div>
+          <div class="list-item"><b>CASE-0023</b><span>Closed</span></div>
+        </div>
+
+        <div class="panel">
+          <h2>Priority Warrants</h2>
+          <div class="list-item"><b>John Doe</b><span>Felony Evading</span></div>
+          <div class="list-item"><b>Sarah Walker</b><span>Search Warrant</span></div>
+          <div class="list-item"><b>James Smith</b><span>Grand Theft Auto</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cases" class="page hidden">
+      <h1>Case Lookup</h1>
+      <input id="caseSearch" placeholder="Search cases..." />
+
+      <div class="panel">
+        <table id="caseTable">
+          <tr><th>Case ID</th><th>Defendant</th><th>Status</th><th>Judge</th></tr>
+          <tr><td>CASE-0001</td><td>John Doe</td><td><span class="pill blue-pill">Filed</span></td><td>Judge Carter</td></tr>
+          <tr><td>CASE-0002</td><td>Jane Miller</td><td><span class="pill gold-pill">Scheduled</span></td><td>Judge Thomas</td></tr>
+          <tr><td>CASE-0003</td><td>Michael Brown</td><td><span class="pill green-pill">Closed</span></td><td>Judge Williams</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="warrants" class="page hidden">
+      <h1>Warrants</h1>
+      <div class="panel">
+        <table>
+          <tr><th>Warrant ID</th><th>Suspect</th><th>Reason</th><th>Status</th></tr>
+          <tr><td>WAR-0001</td><td>John Doe</td><td>Felony Evading</td><td><span class="pill red-pill">Active</span></td></tr>
+          <tr><td>WAR-0002</td><td>Sarah Walker</td><td>Search Warrant</td><td><span class="pill green-pill">Served</span></td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="evidence" class="page hidden">
+      <h1>Evidence Records</h1>
+      <div class="panel">
+        <table>
+          <tr><th>Evidence ID</th><th>Case ID</th><th>Type</th><th>Description</th></tr>
+          <tr><td>EVD-0001</td><td>CASE-0001</td><td>Dashcam</td><td>Pursuit footage</td></tr>
+          <tr><td>EVD-0002</td><td>CASE-0005</td><td>Photo</td><td>Crime scene documentation</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="schedule" class="page hidden">
+      <h1>Court Schedule</h1>
+      <div class="panel">
+        <table>
+          <tr><th>Case ID</th><th>Date</th><th>Time</th><th>Judge</th></tr>
+          <tr><td>CASE-0001</td><td>06/01/2026</td><td>7:00 PM</td><td>Judge Carter</td></tr>
+          <tr><td>CASE-0002</td><td>06/03/2026</td><td>8:30 PM</td><td>Judge Thomas</td></tr>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
